@@ -2,7 +2,9 @@
 
 This web application is based as an introduction to background worker processes in Heroku, which can be found at the [Heroku Devcenter](https://devcenter.heroku.com/articles/python-rq).
 
-Example: https://yoururl.herokuapp.com/?website=url
+Example: https://herokuseleniumworker.herokuapp.com/
+
+Just add /?website=thewebsiteurl
 
 This project started when Heroku decided to add H12 errors which prevented any Selenium Webdriver from performing a large task that took more than 30 seconds. The solution to this issue is using Heroku's free REDISTOGO Python background workers which work with flask to take in a website url and return it's code. This approach can be modified to your needs so that you can run any Selenium process without the fear of a Timeout exception.
 What also makes this project special is that it is setup to use [Undetected Chromedriver](https://github.com/ultrafunkamsterdam/undetected-chromedriver) as it's webdriver, making it possible to bypass Captcha systems and Cloudfare protection on any site.
