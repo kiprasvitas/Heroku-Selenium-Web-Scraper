@@ -16,7 +16,7 @@ def get_status(job):
 def handle_job():
     query_name = request.args.get('website')
     if query_name:
-        job = q.enqueue(scrapeUser, query_name)
+        job = q.enqueue(scrapeWebsite, query_name)
         output = get_status(job)
 
         while job.result == None:
